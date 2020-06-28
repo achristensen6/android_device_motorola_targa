@@ -20,7 +20,7 @@ ro.modem_available=0
 
 # Default network type.
 # 4 => CDMA/EVDO. To be used until Targa has LTE SFN
-ro.telephony.default_network=4
+ro.telephony.default_network=9
 ro.com.google.clientid=android-motorola
 ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html
 ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
@@ -89,10 +89,10 @@ ro.cdma.nbpcd=1
 
 # BEGIN Motorola, a22976, 12-Mar-2010, IKSHADOW-1784, Power Up Tone
 # Motorola, a22976, 12-Apr-2010, IKSHADOW-3298, Remove temporary power up tone
-# persist.mot.powerup.tone=/system/media/bootup.ogg
+persist.mot.powerup.tone=/system/media/bootup.ogg
 # END IKSHADOW-1784
 persist.mot.usb.mediasync = 1
-# persist.usb.android_config = 1
+persist.usb.android_config = 1
 
 # System property for SMC
 ro.service.start.smc=1
@@ -144,13 +144,13 @@ ro.mot.dpmext = true
 # BEGIN Moto,IKDROIDPRO-430, a17673
 # Feature33857 on DroidWE, support DualMode switch, UMTS/CDMA
 ##### Override in cdma_targa.mk until LTE + Global support. ######
-#ro.mot.FTR.33857=true
+ro.mot.FTR.33857=true
 # END IKDROIDPRO-430
 
 # This is necessary for framework to support
 # the LTE and eHRPD capability.
 ##### Override in cdma_targa.mk until LTE + Global support. ######
-#ro.mot.lte_on_cdma=1
+ro.mot.lte_on_cdma=1
 
 # BEGIN Moto, IKSTABLETWO-1284, nfjb73
 # without this property, the lock screen would take global phone as UMTS
@@ -166,9 +166,9 @@ persist.radio.ap.phonetype=2
 
 # Multimode RIL Paths
 ##### Override in cdma_targa.mk until LTE + Global support. ######
-#lte_ril.libpath=/system/lib/lib-mot-lte-ril.so
-#cdma_ril.libpath=/system/lib/libmoto_ril.so
-#ril.rat=LTE
+lte_ril.libpath=/system/lib/lib-mot-lte-ril.so
+cdma_ril.libpath=/system/lib/libmoto_ril.so
+ril.rat=LTE
 
 # Motorola, IKHALFMWK-3, w001091
 # Feature 32711, deep sleep mode support
